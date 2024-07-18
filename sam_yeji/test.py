@@ -17,7 +17,7 @@ sam.to(device=DEVICE)
 mask_generator = SamAutomaticMaskGenerator(sam)
 
 # 이미지 읽기 및 RGB 변환
-image_bgr = cv2.imread(r"C:\Users\yejim\Desktop\cgv\github\CGV_DT\sam_yeji\img\testimg.jfif")  # 이미지 파일을 BGR 포맷으로 읽어옴
+image_bgr = cv2.imread(r"C:\Users\yejim\Desktop\cgv\github\CGV_DT\sam_yeji\img\clean2.jpg")  # 이미지 파일을 BGR 포맷으로 읽어옴
 image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)  # BGR 이미지를 RGB 포맷으로 변환
 
 # 입력 이미지 해상도 축소
@@ -43,7 +43,7 @@ plt.axis('off')
 plt.show()
 
 # 주석된 이미지 파일로 저장 - 파일 경로를 정확히 지정해야 합니다.
-output_path = r"C:\Users\yejim\Desktop\cgv\github\CGV_DT\sam_yeji\new_img\test.jpg"
+output_path = r"C:\Users\yejim\Desktop\cgv\github\CGV_DT\sam_yeji\new_img\clean2_test.jpg"
 success = cv2.imwrite(output_path, annotated_image_rgb)
 
 if success:
