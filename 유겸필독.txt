@@ -1,0 +1,17 @@
+---------------------파이썬------------------
+pip install segment_anything opencv-python matplotlib trimesh torch numpy yolov5
+파일 실행 전 설치하기(1회)
+
+sam_vit_h_4b8939 파일은 용량이 너무커 깃허브로는 안올라감. 구글 클라우드에서 다운 바람
+
+
+
+
+---------------------유니티------------------------
+유니티 push 전 무조건 유니티 종료하기********
+
+0718기준
+sam은 단독 시행을 위함
+sam_unity는 유니티 사용을 위함
+sam_yolo는 단독 시행 및 yolo까지 사용
+
