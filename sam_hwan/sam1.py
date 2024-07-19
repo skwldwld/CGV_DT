@@ -31,16 +31,17 @@ def show_anns(anns):    # 입력 받은 anns 리스트를 이용하여 어노테
                 img[:,:,i] = color_mask[i]
         ax.imshow(np.dstack((img, m*0.35))) # 이미지와 segmentation mask를 결합
         
-image = cv2.imread("sam_hwan/img/cat1.png")      # 원하는 이미지 읽어오기
+image = cv2.imread(r"C:\Users\yejim\Desktop\cgv\github\CGV_DT\sam_hwan\img\test.png")      # 원하는 이미지 읽어오기
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) # OpenCV에서 읽은 이미지는 BGR 채널 순서 -> RGB 채널 순서로 변경
+image_rgb_resized = cv2.resize(image, (800, 600))
 
 import sys
 
 sys.path.append("..")   # 상위 디렉토리를 Python 경로에 추가 -> Segment Anything Model 관련 모듈을 가져오기 위해 (아래에 있음)
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 
-sam_checkpoint = "C:/Users/user/Downloads/sam_vit_h_4b8939.pth" # 모델 체크포인트 파일
+sam_checkpoint = r"C:\Users\yejim\Desktop\cgv\sam\python\checkpoint\sam_vit_h_4b8939.pth" # 모델 체크포인트 파일
 model_type = "vit_h"    # 사용할 SAM 모델
 
 device = "cuda" # GPU를 사용하도록 설정
